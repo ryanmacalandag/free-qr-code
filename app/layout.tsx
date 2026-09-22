@@ -10,9 +10,35 @@ const silkscreen = Silkscreen({
 })  
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://freeqrcoder.xyz'),
   title: 'Free QR Coder',
   description: 'A no-fuzz free-forever QR code generator with no ads, no tracking, and no nonsense.',
   generator: 'v0.app',
+  openGraph: {
+    title: 'Free QR Coder',
+    description: 'A no-fuzz free-forever QR code generator with no ads, no tracking, and no nonsense.',
+    url: 'https://freeqrcoder.xyz',
+    siteName: 'Free QR Coder',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free QR Coder',
+    description: 'A no-fuzz free-forever QR code generator with no ads, no tracking, and no nonsense.',
+    images: ['/og-image.png'],
+  },
+  alternates: {
+    canonical: '/',
+  },
+  manifest: '/site.webmanifest',
   icons: {
     icon: [
       {

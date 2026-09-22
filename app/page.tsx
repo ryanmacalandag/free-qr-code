@@ -2,23 +2,23 @@ import { QrGenerator } from '@/components/qr-generator'
 
 export default function Page() {
   return (
-    <main className="flex min-h-svh flex-col items-center justify-center px-6 py-8 md:py-16">
+    <main className="flex min-h-svh flex-col items-center justify-center px-10 py-8 md:py-16">
       <div className="flex w-full max-w-sm flex-col items-center gap-8 md:gap-10">
         <div className="flex flex-col items-center gap-1 text-center">
-          <h1 className="flex flex-row items-center text-3xl md:text-4xl font-semibold tracking-tight text-foreground font-silkscreen">
+          <h1 className="flex flex-row items-center text-2xl md:text-4xl font-semibold tracking-tight text-foreground font-silkscreen">
             Free
-            <div className="relative text-emerald-800 pb-2 pt-1 m-2 px-2 bg-emerald-500 rounded-lg 
+            <div className="relative text-emerald-800 pb-2 pt-1 m-2 px-2 bg-emerald-500/20 rounded-lg 
             ">
-              <div className="absolute top-0 left-0 corner-line size-4 aspect-square"></div>
-              <div className="absolute top-0 right-0 corner-line size-4 aspect-square rotate-90"></div>
-              <div className="absolute bottom-0 right-0 corner-line size-4 aspect-square rotate-180"></div>
-              <div className="absolute bottom-0 left-0 corner-line size-4 aspect-square rotate-270"></div>
-              QR
+              <div className="absolute top-0 left-0 corner-line size-3 aspect-square"></div>
+              <div className="absolute top-0 right-0 corner-line size-3 aspect-square rotate-90"></div>
+              <div className="absolute bottom-0 right-0 corner-line size-3 aspect-square rotate-180"></div>
+              <div className="absolute bottom-0 left-0 corner-line size-3 aspect-square rotate-270"></div>
+              <span className="relative z-50 text-accent tracking-tighter hover:scale-110">QR</span>
             </div>
             Coder
           </h1>
-          <p className="text-xs text-muted-foreground/60 text-balance">
-            Type something, get a QR code, download it. That&apos;s it.
+          <p className="text-xs text-muted-foreground/60 text-balance px-8">
+            Type URL, get QR code and download. Doneskies. Easy as.
           </p>
         </div>
         <QrGenerator />

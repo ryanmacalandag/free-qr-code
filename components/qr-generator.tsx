@@ -6,7 +6,7 @@ import { Download } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 
-const SIZE = 640
+const SIZE = 512
 
 export function QrGenerator() {
   const [value, setValue] = useState('https://freeqrcoder.xyz')
@@ -69,7 +69,7 @@ export function QrGenerator() {
           htmlFor="qr-input"
           className="text-xs hidden md:flex uppercase tracking-widest text-muted-foreground"
         >
-          Text or URL
+          Type Text or URL
         </label>
         <Input
           id="qr-input"
