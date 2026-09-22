@@ -76,7 +76,7 @@ export function QrGenerator() {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Enter text or a URL"
-          className="font-mono text-indigo-800 animate-pulse placeholder:text-indigo-400 border bg-indigo-200/10 border-indigo-800/20 px-4 py-6"
+          className="font-mono text-emerald-700 animate-pulse placeholder:text-emerald-400 border bg-emerald-200/10 border-emerald-800/20 px-4 py-6"
           autoComplete="off"
           spellCheck={false}
         />
@@ -104,7 +104,7 @@ export function QrGenerator() {
       <Button
         onClick={handleDownload}
         disabled={isEmpty || !!error}
-        className="w-full gap-2 py-6 text-lg hover:bg-primary/85 hover:-translate-y-1 *:transition-transform"
+        className="w-full gap-2 py-6 text-lg hover:bg-emerald-800 hover:-translate-y-1 *:transition-transform"
       >
         <Download className="size-4" aria-hidden="true" />
         Download PNG
