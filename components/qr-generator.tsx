@@ -33,7 +33,13 @@ export function QrGenerator() {
         light: '#ffffff',
       },
     })
-      .then(() => setError(null))
+      .then(() => {
+        // The qrcode library sets inline pixel width/height on the canvas,
+        // which overrides our responsive CSS sizing. Reset it afterward.
+        canvas.style.width = '100%'
+        canvas.style.height = '100%'
+        setError(null)
+      })
       .catch(() => setError('Could not generate a QR code for this input.'))
   }, [value])
 
@@ -86,7 +92,8 @@ export function QrGenerator() {
             ref={canvasRef}
             width={SIZE}
             height={SIZE}
-            className="h-full w-full"
+            className="block size-full"
+            style={{ width: '100%', height: '100%' }}
             aria-label="Generated QR code"
           />
         )}
