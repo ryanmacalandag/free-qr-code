@@ -7,7 +7,7 @@ export default function Page() {
         <div className="flex flex-col items-center gap-1 text-center">
           <h1 className="flex flex-row items-center text-3xl md:text-4xl font-semibold tracking-tight text-foreground font-silkscreen">
             Free
-            <div className="relative text-emerald-800 pb-2 pt-1 m-2 px-2 bg-emerald-400/20 rounded-lg inset-ring-2 inset-ring-white
+            <div className="relative text-emerald-800 pb-2 pt-1 m-2 px-2 bg-emerald-500 rounded-lg 
             ">
               <div className="absolute top-0 left-0 corner-line size-4 aspect-square"></div>
               <div className="absolute top-0 right-0 corner-line size-4 aspect-square rotate-90"></div>
