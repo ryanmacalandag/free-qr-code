@@ -155,6 +155,15 @@
   }
 }
 
+@layer components {
+  .corner-line {
+    border-radius: .55rem 0 0 0;
+    border-top: 0.3rem solid;
+    border-left: 0.3rem solid;
+    position: absolute;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
