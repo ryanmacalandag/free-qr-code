@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button'
 const SIZE = 640
 
 export function QrGenerator() {
-  const [value, setValue] = useState('https://v0.app')
+  const [value, setValue] = useState('https://freeqrcoder.xyz')
   const [error, setError] = useState<string | null>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
@@ -67,7 +67,7 @@ export function QrGenerator() {
       <div className="flex flex-col gap-2">
         <label
           htmlFor="qr-input"
-          className="font-mono text-xs uppercase tracking-widest text-muted-foreground"
+          className="text-xs uppercase tracking-widest text-muted-foreground"
         >
           Text or URL
         </label>
@@ -76,15 +76,15 @@ export function QrGenerator() {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Enter text or a URL"
-          className="font-mono"
+          className="font-mono text-indigo-800 animate-pulse placeholder:text-indigo-400 border bg-indigo-200/10 border-indigo-800/20 px-4 py-6"
           autoComplete="off"
           spellCheck={false}
         />
       </div>
 
-      <div className="flex aspect-square w-full items-center justify-center overflow-hidden rounded-lg border border-border bg-card p-6">
+      <div className="flex aspect-square w-full items-center justify-center overflow-hidden rounded border border-border bg-card p-6">
         {isEmpty ? (
-          <p className="font-mono text-xs text-muted-foreground">
+          <p className="font text-xs text-muted-foreground">
             Enter text to generate a code
           </p>
         ) : (
@@ -104,7 +104,7 @@ export function QrGenerator() {
       <Button
         onClick={handleDownload}
         disabled={isEmpty || !!error}
-        className="w-full gap-2"
+        className="w-full gap-2 py-6 text-lg hover:bg-primary/85 hover:-translate-y-1 *:transition-transform"
       >
         <Download className="size-4" aria-hidden="true" />
         Download PNG
